@@ -1,14 +1,17 @@
 // YOUR CODE HERE
 console.log("Script Running.");
-const light1 = document.querySelector("#lightbulb1");
-const light2 = document.querySelector("#lightbulb2");
-const light3 = document.querySelector("#lightbulb3");
-const light4 = document.querySelector("#lightbulb4");
-const light5 = document.querySelector("#lightbulb5");
-const light6 = document.querySelector("#lightbulb6");
-const light7 = document.querySelector("#lightbulb7");
-const light8 = document.querySelector("#lightbulb8");
-const light9 = document.querySelector("#lightbulb9");
+let lights={
+    1 : document.querySelector("#lightbulb1"),
+    2: document.querySelector("#lightbulb2"),
+    3:document.querySelector("#lightbulb3"),
+    4:document.querySelector("#lightbulb4"),
+    5:document.querySelector("#lightbulb5"),
+    6:document.querySelector("#lightbulb6"),
+    7:document.querySelector("#lightbulb7"),
+    8:document.querySelector("#lightbulb8"),
+    9:document.querySelector("#lightbulb9")
+}
+
 const switch1 = document.querySelector("#switch1");
 const switch2 = document.querySelector("#switch2");
 const switch3 = document.querySelector("#switch3");
@@ -21,37 +24,38 @@ const switch9 = document.querySelector("#switch9");
 const masterSwitch = document.querySelector("#masterSwitch");
 const resetSwitch = document.querySelector("#reset");
 const randomBtn = document.querySelector("#random");
+const wrapper = document.querySelector("#wrapper");
 const numbers = [0, 0, 0];
 
 
 const switchingLights = (x) => {
     switch(x){
         case 1:
-            light1.classList.toggle("active");
+            lights[1].classList.toggle("active");
             break;
         case 2:
-            light2.classList.toggle("active");
+            lights[2].classList.toggle("active");
             break;
         case 3:
-            light3.classList.toggle("active");
+            lights[3].classList.toggle("active");
             break;
         case 4:
-            light4.classList.toggle("active");
+            lights[4].classList.toggle("active");
             break;
         case 5:
-            light5.classList.toggle("active");
+            lights[5].classList.toggle("active");
             break;
         case 6:
-            light6.classList.toggle("active");
+            lights[6].classList.toggle("active");
             break;
         case 7:
-            light7.classList.toggle("active");
+            lights[7].classList.toggle("active");
             break;
         case 8:
-            light8.classList.toggle("active");
+            lights[8].classList.toggle("active");
             break;
         case 9:
-            light9.classList.toggle("active");
+            lights[9].classList.toggle("active");
             break;
         default:
             console.log("hi");
@@ -110,15 +114,15 @@ const masterChange = () => {
 
 }
 const reset = () => {
-    light1.classList.remove("active");
-    light2.classList.remove("active");
-    light3.classList.remove("active");
-    light4.classList.remove("active");
-    light5.classList.remove("active");
-    light6.classList.remove("active");
-    light7.classList.remove("active");
-    light8.classList.remove("active");
-    light9.classList.remove("active");
+    lights[1].classList.remove("active");
+    lights[2].classList.remove("active");
+    lights[3].classList.remove("active");
+    lights[4].classList.remove("active");
+    lights[5].classList.remove("active");
+    lights[6].classList.remove("active");
+    lights[7].classList.remove("active");
+    lights[8].classList.remove("active");
+    lights[9].classList.remove("active");
     switch1.checked = false;
     switch2.checked = false;
     switch3.checked = false;
@@ -152,11 +156,6 @@ const randomNums = (max) =>{
     numbers[2] = c;
     return console.log(numbers);
 }
-const abc = ["a", "b", "c"];
-
-// for(let i = 0; i <10; i++){
-//     switchingLights(i);
-// }
 
 const randomizerv2 = () =>{
     reset();
@@ -166,19 +165,6 @@ const randomizerv2 = () =>{
         switchingLights(i);
     });
 };
-// async function delay() {
-//     console.log("Start");
-//     // Creates a promise that resolves after 5000 milliseconds (5 seconds)
-//     await new Promise(resolve => setTimeout(resolve, 5000));
-//     console.log("Waited for 5 seconds");
-//     console.log("End");
-// }
-
-// for(let i = 0; i<30; i++){
-//     randomizerv2()
-//     delay()
-// }
-
 
 switch1.addEventListener('change', change38);
 switch2.addEventListener('change', change17);
