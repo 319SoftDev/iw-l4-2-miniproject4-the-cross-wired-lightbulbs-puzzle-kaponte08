@@ -1,11 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="eng">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Switches</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
+    <span id="btns">
+      <div class="ms">
+        <p>MasterSwitch:</p>
+        <label class="switch">
+          <input id="masterSwitch" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="rdn">
+        <label class="button">
+          <button id="random">Randomizer</button>
+        </label>
+      </div>
+      <div class="rst">
+        <label class="button">
+          <button id="reset">Reset</button>
+        </label>
+      </div>
+    </span>
     <div id="wrapper">
       <div class="row">
         <div class="light">
@@ -78,7 +98,6 @@
       </div>
     </div>
     
-    <!--Connect your script here-->
-
+    <script src="script.js"></script>
   </body>
 </html>

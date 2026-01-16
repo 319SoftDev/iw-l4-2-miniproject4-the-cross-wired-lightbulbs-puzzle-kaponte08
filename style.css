@@ -107,4 +107,38 @@ h2 {
 .hidden {
   display: none;
 }
-
+#btns{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 85vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+}
+.ms{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-left: 50px;
+  padding-bottom: 10px;
+}
+.ms .slider{
+  background-color: #336fa7;
+}
+#reset{
+  width: 65px;
+  height: 40px;
+  background-color: #497eaf;
+  border-radius: 14px;
+  color: #ffffff;
+  border: none;
+}
+#random{
+  width: 85px;
+  height: 40px;
+  background-color: #497eaf;
+  border-radius: 14px;
+  color: #ffffff;
+  border: none;
+}
